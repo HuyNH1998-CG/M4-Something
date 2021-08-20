@@ -1,0 +1,14 @@
+bigg/services/ICustomerServices.java
+ bigg.services.ICustomerServices
+bigg/config/AppInit.java
+ bigg.config.AppInit
+bigg/controller/CustomerController.java
+ bigg.controller.CustomerController
+bigg/config/AppConfig.java
+ bigg.config.AppConfig
+bigg/services/CustomerServices.java
+ bigg.services.CustomerServices
+bigg/repository/CustomerRepository.java
+ bigg.repository.CustomerRepository
+bigg/model/Customer.java
+ bigg.model.Customer
