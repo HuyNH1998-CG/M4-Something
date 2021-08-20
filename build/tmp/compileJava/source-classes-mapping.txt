@@ -1,14 +1,26 @@
+bigg/repository/CustomerRepository.java
+ bigg.repository.CustomerRepository
+bigg/model/Role.java
+ bigg.model.Role
+bigg/model/Customer.java
+ bigg.model.Customer
+bigg/repository/RoleRepository.java
+ bigg.repository.RoleRepository
 bigg/services/ICustomerServices.java
  bigg.services.ICustomerServices
 bigg/config/AppInit.java
  bigg.config.AppInit
+bigg/services/CustomerServices.java
+ bigg.services.CustomerServices
+bigg/formatter/RoleFormatter.java
+ bigg.formatter.RoleFormatter
+bigg/services/IRoleServices.java
+ bigg.services.IRoleServices
 bigg/controller/CustomerController.java
  bigg.controller.CustomerController
 bigg/config/AppConfig.java
  bigg.config.AppConfig
-bigg/services/CustomerServices.java
- bigg.services.CustomerServices
-bigg/repository/CustomerRepository.java
- bigg.repository.CustomerRepository
-bigg/model/Customer.java
- bigg.model.Customer
+bigg/services/RoleService.java
+ bigg.services.RoleService
+bigg/controller/RoleController.java
+ bigg.controller.RoleController

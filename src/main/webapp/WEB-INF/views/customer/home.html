@@ -15,13 +15,15 @@
                 <th>UserName</th>
                 <th>Password</th>
                 <th>Created Date</th>
+                <th>Role</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
             <tr th:each="cus : ${customers}">
                 <td th:text="${cus.username}"></td>
-                <td th:text="${cus.password}"></td>
+                <td><input type="password" th:value="${cus.password}" readonly></td>
                 <td th:text="${cus.date}"></td>
+                <td th:text="${cus.role}"></td>
                 <td><a th:href="@{/edit/{id}(id=${cus.id})}"> Edit </a></td>
                 <td><a th:href="@{/delete/{id}(id=${cus.id})}"> Delete </a></td>
             </tr>

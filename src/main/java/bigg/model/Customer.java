@@ -1,9 +1,6 @@
 package bigg.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
@@ -14,14 +11,18 @@ public class Customer {
     private String username;
     private String password;
     private Date Date;
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private Role role;
 
     public Customer() {
     }
 
-    public Customer(String username, String password, java.sql.Date date) {
+    public Customer(String username, String password, java.sql.Date date, Role role) {
         this.username = username;
         this.password = password;
         Date = date;
+        this.role = role;
     }
 
     public long getId() {
@@ -54,5 +55,13 @@ public class Customer {
 
     public void setDate(java.sql.Date date) {
         Date = date;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 }

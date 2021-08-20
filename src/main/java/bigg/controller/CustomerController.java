@@ -1,7 +1,9 @@
 package bigg.controller;
 
 import bigg.model.Customer;
+import bigg.model.Role;
 import bigg.services.ICustomerServices;
+import bigg.services.IRoleServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +15,13 @@ import java.util.Optional;
 public class CustomerController {
     @Autowired
     private ICustomerServices customerServices;
+    @Autowired
+    private IRoleServices roleServices;
+
+    @ModelAttribute("roles")
+    public Iterable<Role> roles() {
+        return roleServices.findAll();
+    }
 
     @GetMapping("/home")
     public ModelAndView home(@RequestParam Optional<String> search) {
